@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Map</title>
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <!-- Replace YOUR_API_KEY with your actual key -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&callback=initMap"
+        async defer>
+    </script>
+
+    <script>
+        function initMap() {
+            const centerCoords = { lat: -1.0921, lng: 37.0116 };  // Example: JKUAT
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: centerCoords,
+            });
+
+            new google.maps.Marker({
+                position: centerCoords,
+                map: map,
+                title: "JKUAT",
+            });
+        }
+    </script>
+</body>
+</html>
