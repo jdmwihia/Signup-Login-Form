@@ -1,1 +1,2 @@
-Simple sign up/login form in django
+Version 2 of the WapiBus project, created using django
+
